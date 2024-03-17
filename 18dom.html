@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+    youtube titles
+    const t = document.getElementById('video-title')
+    t.forEach((l)=>{console.log(l.title)})
+ -->
+
+<!-- converting html list to array
+    Array.from(tempcl)
+    const mca = Array.from(tempcl)
+    mca.forEach((li)=>{
+    li.style.color = "green"
+})
+-->
+
+<!-- 
+    const myH2 = document.querySelectorAll('.mw-headline')
+    myH2.forEach((h)=>{h.style.color = 'orange'})
+
+    myH2.forEach((h)=>{h.style.color = 'orange';h.style.backgroundColor = "yellow";h.style.padding = "15px"})
+
+    myH2.forEach((h)=>{h.style.color = 'orange';h.style.backgroundColor = "yellow";h.style.padding = "15px";h.innerText = "PSS"})
+ -->
+
+<!-- use forEach loop for nodeList -->
+
+<!-- html collections and nodelists are not pure arrays -->
+
+<!-- 
+    const tmep = document.querySelectorAll('li')
+    tmep[0].style.color = "green"
+
+    const myH1 = document.querySelector("h1")
+    myH1.style.color = 'green'
+
+    const myH1 = document.querySelectorAll("h1")
+    myH1.style.color = 'green'
+
+    document.getElementsByClassName('list-item')
+
+    const templist = document.querySelectorAll("li")
+    templist.forEach(function (l) {
+        l.style.backgroundColor = 'green'
+    })
+
+    document.querySelector('input[type="password"]')
+    document.querySelectorAll('.heading')
+    document.querySelectorAll('#title')
+    document.querySelectorAll('h2')
+    document.getElementById('title')
+    document.getElementById('title').id
+    document.getElementById('title').class  undefined
+    document.getElementById('title').className
+    document.getElementById('title').getAttribute(‘class’)
+    document.getElementById('title').setAttribute('class','test')
+    document.getElementById('title').setAttribute('class','test heading')
+    title = document.getElementById('title')
+    <h1 id=​"title" class=​"heading">​DOM learning on Chai aur Code​</h1>​
+    title.style.backgroundColor = "green"
+    title.textContent-invisible text also
+    title.innerHTML-tags also
+    title.innerText
+ -->
+
+<!--
+    console.log(window)
+    console.log(window.document)
+    console.log(document)
+    console.dir(document)
+    console.log(document.baseURI)
+    console.log(document.links)     similar to array
+    console.log(document.links[2])
+    document.getElementById('firstHeading')
+    document.getElementById('firstHeading').innerHTML = "<h1>Chai Aur Code</h1>"
+    excalidraw
+
+    Window->document->HTML->head->title->text node
+                                ->meta->attribute
+                          ->body->div->attribute
+                                     ->h1->attribute
+                                         ->text node
+                                       p->text node 
+-->

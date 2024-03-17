@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <!-- 
+        we can use events directly in HTML tags,its not efficient
+        document.getElementById("id").onClick = function(){}    gives less features
+        document.getElementById("id").addEventListener('click',function(e){alert("clicked");e.stopPropogation},false)
+        attachEvent()   used earlier
+
+        types,timestamp,defaultPrevented
+        toElement,target,srcElement,current target
+        clientX,clientY,screenX,screenY,
+        altkey,ctrlKey,shiftKey,keyCode
+     -->
+     <!-- Event propogation : default-false-event bubbling and true-event capturing 
+        inside to outide clicked-bubbling-bottom to top
+        capturing-top to bottom-outside to inside
+        document.getElementById("id").addEventListener('click',function(e){alert("clicked");},true)  capturing
+        e.stopPropagation(); //stops the event
+    -->
+    <!-- 
+        document.getElementById('google').addEventListener('click',function(e){e.preventDefault();stopPropogation()})   2nd parameter is optional
+        document.querySelector("#images").addEventListener('click',function(e){
+            console.log(e.target.parentNode)
+            console.log(e.target.tagName)
+            if(e.target.tagName == 'IMG'){
+                let removeIt  = e.target.parentNode;
+                removeIt.remove();
+            }
+            removeIt.parentNode.removeChild(removeIt);
+        })
+     -->
+     
+</body>
+</html>

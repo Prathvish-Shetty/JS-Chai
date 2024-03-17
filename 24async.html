@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // handeler is a function without name
+    // setTimeout(()=>{
+    //     console.log("PSS");
+    // },2000)
+    const sayPSS = ()=>{
+        console.log("PSS");
+    }
+    const changeText = ()=>{
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    setTimeout(sayPSS, 3000);
+    const changeMe = setTimeout(changeText, 3000);
+    document.querySelector("#stop").addEventListener("click",()=> {
+        clearTimeout(changeMe);//it will stop the execution of changeText after 3 seconds
+        console.log("Stopped");
+    });
+</script>
+</html>
